@@ -1,0 +1,123 @@
+/* --- Navbar --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #00bbff, #008ecc);
+  color: white;
+  padding: 16px 32px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background 0.3s ease-in-out;
+}
+
+.navbar:hover {
+  background: linear-gradient(135deg, #00c6ff, #0099e6);
+}
+
+/* --- Brand / Title --- */
+.nav-title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.nav-logo {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.25s ease-in-out;
+}
+
+.nav-logo:hover {
+  color: #ffe0b2;
+}
+
+/* --- Navbar Buttons Container --- */
+.nav-buttons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+/* --- Cart Button --- */
+.cart-button {
+  position: relative;
+  background: linear-gradient(135deg, #ff9800, #e68900);
+  padding: 10px 22px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.cart-button:hover {
+  background: linear-gradient(135deg, #ffa726, #f57c00);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.cart-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Cart Badge --- */
+.cart-button::after {
+  content: attr(data-count);
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: #e53935;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid white;
+  opacity: 0; /* hidden by default */
+  transform: scale(0.8);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.cart-button[data-count]:not([data-count="0"]):after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 22px;
+  }
+
+  .nav-buttons {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+  }
+
+  .cart-button {
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 24px;
+  }
+}

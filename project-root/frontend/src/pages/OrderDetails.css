@@ -1,0 +1,76 @@
+/* --- Order Details Page --- */
+.order-details-page {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #fffdf9, #fff8f0);
+  border-radius: 16px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.order-details-page h1 {
+  font-size: 30px;
+  margin-bottom: 25px;
+  color: #6b4226;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.order-details-page p {
+  font-size: 16px;
+  margin: 8px 0;
+  color: #333;
+}
+
+.order-details-page strong {
+  color: #6b4226;
+}
+
+.order-details-page h3 {
+  margin-top: 25px;
+  margin-bottom: 12px;
+  font-size: 22px;
+  color: #4b2e2e;
+  border-bottom: 2px solid #e6ccb2;
+  padding-bottom: 6px;
+}
+
+.order-details-page ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+
+.order-details-page ul li {
+  background: #fff8e7;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  border-left: 5px solid #6b4226;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.order-details-page button {
+  background: linear-gradient(135deg, #6b4226, #8b5e3c);
+  color: #fff;
+  border: none;
+  padding: 14px 22px;
+  font-size: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s;
+}
+
+.order-details-page button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* Small Fade In */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}

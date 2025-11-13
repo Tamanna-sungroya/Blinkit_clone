@@ -1,0 +1,141 @@
+/* ====== shell / cards ====== */
+.order-tracking-shell {
+  width: 210vh;               /* ✅ full width */
+  min-height: 85vh;         /* ✅ full height */
+  margin: 0;
+  padding: 20px;
+  background: #fdf6e3;
+  border-radius: 0;          /* ✅ no rounded for full screen */
+  box-shadow: none;          /* ✅ remove box shadow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.order-title {
+  font-size: 24px;
+  font-weight: 800;
+  margin: 12px 0 24px;
+  color: #0f172a;
+  text-align: center;
+}
+
+/* partner display */
+.partner-line {
+  display: flex;
+  flex-direction: column; /* ✅ vertical alignment */
+  justify-content: center;   /* center vertically in the container if needed */
+  align-items: center;       /* center horizontally */
+  gap: 6px;                  /* spacing between lines */
+  font-weight: 600;
+  margin: 5px;
+  color: #0f172a;
+}
+
+/* ETA card (status ke niche gap ke liye) */
+.eta-card {
+  margin-top: 16px;        /* ✅ Status ke niche space */
+  display: flex;
+  justify-content: center;
+}
+
+.eta-chip {
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  background: #facc15;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.1rem;
+  box-shadow: 0px 4px 15px rgba(250, 204, 21, 0.4);
+  animation: pulse 1.5s infinite;
+}
+
+/* ====== HORIZONTAL TIMELINE ====== */
+.timeline-horizontal {
+  position: relative;
+  width: 100%;                /* ✅ full width */
+  padding: 24px 12px 12px;
+  border-radius: 0;
+  background: #fff;        /* gray-50 */
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  margin-top: 24px;
+  overflow-x: hidden;
+}
+
+/* Track line */
+.timeline-horizontal .track {
+  position: absolute;
+  left: 40px;                 /* ✅ spacing from edges */
+  right: 40px;
+  top: 32px;
+  height: 4px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  z-index: 0;
+}
+
+.timeline-horizontal .track .progress {
+  position: absolute;
+  left: 0; top: 0; height: 100%;
+  width: var(--progress, 0%);
+  background: #22c55e;
+  border-radius: 999px;
+  transition: width .6s ease-in-out; /* ✅ smoother */
+}
+
+/* Steps */
+.timeline-horizontal .steps {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;  /* ✅ spread across full width */
+  padding: 0 40px 12px;
+  width: 100%;
+}
+
+.timeline-horizontal .step {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+/* Dots */
+.timeline-horizontal .step .dot {
+  width: 20px; height: 20px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: #d1d5db;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  transition: transform .3s ease, background .3s ease;
+}
+
+/* Labels */
+.timeline-horizontal .step .label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  line-height: 1.2;
+}
+
+/* Completed */
+.timeline-horizontal .step.done .dot {
+  background: #22c55e;
+}
+.timeline-horizontal .step.done .label {
+  color: #16a34a;
+}
+
+/* Active */
+.timeline-horizontal .step.active .dot {
+  background: #f59e0b;
+  animation: dotPulse 1.2s ease-in-out infinite;
+}
+.timeline-horizontal .step.active .label {
+  color: #b45309;
+}
+
+@keyframes dotPulse {
+  0%,100% { transform: scale(1);   box-shadow: 0 0 0 0 rgba(245,158,11,.35); }
+  50%     { transform: scale(1.12); box-shadow: 0 0 0 10px rgba(245,158,11,0); }
+}

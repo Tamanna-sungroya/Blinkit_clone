@@ -1,0 +1,138 @@
+/* --- Order History Page --- */
+.order-history-page {
+  padding: 140px 20px 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background: #fdf6e3;
+  font-family: "Poppins", sans-serif;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.order-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #4b2e2e;
+  margin-bottom: 40px;
+  border-bottom: 3px solid #b08968;
+  padding-bottom: 12px;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  letter-spacing: 1px;
+}
+
+.order-table-wrapper {
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+  justify-content: center;
+}
+
+.order-table {
+  width: 100%;
+  max-width: 1200px;
+  border-collapse: collapse;
+  background: #fffdf9;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  border-radius: 14px;
+  overflow: hidden;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.order-table th {
+  background: linear-gradient(135deg, #b08968, #8c5c3d);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.order-table td {
+  padding: 16px;
+  border-bottom: 1px solid #e6ccb2;
+  font-size: 15px;
+  color: #333;
+}
+
+.order-table tr:hover {
+  background: #fdf2e9;
+  transform: scale(1.005);
+  transition: all 0.25s ease;
+}
+
+/* --- Status Styling --- */
+.status {
+  padding: 6px 14px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  display: inline-block;
+  min-width: 90px;
+  text-align: center;
+}
+
+.status.delivered {
+  background: #d4edda;
+  color: #155724;
+}
+
+.status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.shipped {
+  background: #cce5ff;
+  color: #004085;
+}
+
+/* --- Button --- */
+.view-btn {
+  padding: 8px 16px;
+  background: #b08968;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.2s ease, opacity 0.2s;
+}
+
+.view-btn:hover {
+  background: #8c5c3d;
+  transform: scale(1.07);
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .order-table {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .order-table th, .order-table td {
+    padding: 12px;
+  }
+
+  .status {
+    font-size: 12px;
+    min-width: 70px;
+    padding: 4px 8px;
+  }
+
+  .view-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}

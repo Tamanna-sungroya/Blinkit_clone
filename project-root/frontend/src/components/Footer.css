@@ -1,0 +1,52 @@
+/* --- Footer --- */
+.footer {
+  background: linear-gradient(135deg, #00bbff, #008ecc);
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* ✅ allows wrapping on smaller screens */
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Left side (text) --- */
+.footer p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* --- Support / Links --- */
+.support-link {
+  color: #ffeb99;
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 20px;
+  transition: color 0.25s ease, transform 0.2s ease;
+}
+
+.support-link:last-child {
+  margin-right: 0;
+}
+
+.support-link:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  text-decoration: underline;
+}
+
+/* --- Responsive Footer --- */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    padding: 14px;
+  }
+
+  .support-link {
+    margin: 0 8px;
+  }
+}
